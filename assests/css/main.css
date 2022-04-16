@@ -1,0 +1,85 @@
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+#header{
+    background-color: #fff;
+    border-bottom: 1px solid #999;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}  
+#header button{
+    border: 0px solid transparent;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+} 
+#header button svg{
+    width: 100% ;
+    height: 100%;
+}
+#movies{
+}
+#movies #poster {
+    position: relative;
+
+}
+#movies #poster img{
+    width: 100%;
+    z-index: -2;
+}
+#movies #info{
+    position: absolute;
+    bottom: 0px;
+    background-color: #777;
+    z-index: -1;
+
+
+}
+#movies #options{
+    background-color: #fff;
+    height: 100px;
+    padding-top: 20px;
+    z-index: 99;
+
+}
+#movies #options button{
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+}
+#movies #options #like,#movies #options #dislike{
+    border: 1px solid #f00;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#movies #options #like{
+    border: 1px solid #0f0;
+
+}
+#movies #options #like svg{
+    fill: #0f0;
+}
+#movies #options #dislike svg{
+    fill: #f00
+}
+#movies #options button svg{
+    width: 90%;
+    height: 90%;
+}
+#movies #options #more{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+

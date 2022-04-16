@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.css">
+    <link rel="stylesheet" href="assests/css/main.css">
+
+
+</head>
+<body>
+    <div id="header" class="row p-0 m-0 justify-content-between">
+        <div class="col-2 p-1">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>                
+            </button>
+        </div>
+        <div class="col-8 p-1">
+            <h2>
+                Movies
+            </h2>
+        </div>
+        <div class="col-2 p-1">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                    <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                  </svg>               
+            </button>
+        </div>
+    </div>
+    <div id="movies">
+        <div id="poster">
+            <img src="./assests/img/download.jpg" alt="">
+            <div id="info">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur voluptate sapiente debitis, quis, earum quae dolore voluptas in ratione, amet tempora maiores cupiditate sunt. Provident optio voluptate quibusdam adipisci cumque.
+                </p>
+            </div>
+        </div> 
+        <div class="row justify-content-around  m-0" id="options">
+            <div class="col-3 p-1">
+                <button id="like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                      </svg>
+                </button>
+            </div>
+            <div class="col-3 p-1">
+                <button id="more">
+                    More!
+                </button>
+            </div>
+            <div class="col-3 p-1">
+                <button id="dislike">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heartbreak-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.931.586 7 3l1.5 4-2 3L8 15C22.534 5.396 13.757-2.21 8.931.586ZM7.358.77 5.5 3 7 7l-1.5 3 1.815 4.537C-6.533 4.96 2.685-2.467 7.358.77Z"/>
+                      </svg>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="./assests/js/bootstrap.js"></script>
+    <script src="./assests/js/popper.js"></script>
+</body>
+</html>
