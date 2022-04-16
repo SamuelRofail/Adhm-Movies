@@ -37,6 +37,7 @@ body{
     bottom: 0px;
     background-color: #777;
     z-index: -1;
+    display: none;
 
 
 }
