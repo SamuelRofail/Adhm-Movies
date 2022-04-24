@@ -2,14 +2,18 @@ body{
     height: 100vh;
     overflow-y: hidden;
 }
+
 #header{
     background-color: #fff;
     border-bottom: 1px solid #999;
-    height: 50px;
+    height: 90px;
     overflow-x: hidden;
     overflow-y: hidden;
-
+    position: relative;
+    padding-top: 40px;
+    padding-inline: 5px;
 }  
+
 #header button{
     border: 0px solid transparent;
     background-color: transparent;
@@ -22,6 +26,84 @@ body{
     width: 100% ;
     height: 100%;
 }
+#header button:focus{
+    outline-width: 0px;
+}
+#header img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-block-end: 15px ;
+}
+#header h2{
+    display: inline-block;
+    font-size: 18px;
+}
+
+#sidemenu{
+    width: 250px;
+    background-color: #fff;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    left: -100%;
+    border-right: 2px solid #999;
+    transition: all 0.5s ease-in-out;
+}
+#sidemenu #profile{
+    height: 90px;
+    background-color: #faa;
+    padding: 0;
+
+    
+}
+#sidemenu #profile .col-4{
+    position: relative;
+
+}
+#sidemenu #profile img{
+    width: 70px;
+    position: absolute;
+    top: 8px;
+    left:5px;
+    height: 70px;
+    border-radius: 50%;
+}
+#sidemenu #profile p{
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+#sidemenu ul{
+    list-style: none;
+    padding: 0;
+}
+#sidemenu ul li{
+    display: block;
+    height: 50px;
+    
+}
+#sidemenu ul li a{
+    display: block;
+    color: #000;
+    height: 100%;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 50px;
+    text-decoration: none;
+    position: relative;
+}
+#sidemenu ul li a svg{
+    position: absolute;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+}
+
+
+
 #movies{
 }
 #movies #poster {
@@ -29,8 +111,10 @@ body{
 
 }
 #movies #poster img{
-    width: 100%;
     z-index: -2;
+    margin: 5px auto;
+    display: block;
+    max-height: 500px;
 }
 #movies #info{
     position: absolute;
@@ -55,13 +139,18 @@ body{
 }
 #movies #options #like,#movies #options #dislike{
     border: 1px solid #f00;
+    background-color: #f00;
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 #movies #options #like{
     border: 1px solid #0f0;
+    background-color: #0f0;
 
+}
+#movies #options #like img{
+    
 }
 #movies #options #like svg{
     fill: #0f0;
@@ -74,13 +163,238 @@ body{
     height: 90%;
 }
 #movies #options #more{
-    background-color: #000;
+    background-color: #192939;
     color: #fff;
     width: 100%;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
     padding: 8px;
     border: 1px solid transparent;
     border-radius: 10px;
     margin-top: 5px;
 }
+#movies #options p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+#movies #options p span{
+    color: #a4284a;
+    font-size: 20px;
+}
+/*  */
+/* Movie PAGE */
+/*  */
+
+
+#movie{
+    padding: 5px;
+}
+#movie #moviename{
+    margin: 0;
+}
+#movie #year{
+    color: #008832;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+#movie #info {
+
+}
+#movie #info p{
+    color: #444;
+    font-size: 18px;
+    font-weight: 500;
+}
+#movie #info p span{
+    color: #a4284a;
+}
+#movie #bio{
+}
+#movie #bio #tabs{
+    height: 450px;
+    width: 100%;
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 3px;
+}
+#movie #bio #tabs #tab-header{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+#movie #bio #tabs #tab-header > div{
+    width: calc(100% / 3);
+    text-align: center;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+#movie #bio #tabs #tab-header > div.active{
+}
+#movie #bio #tabs #indicator{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #172736;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+#movie #bio #tabs #tab-indicator{
+    position: absolute;
+    width: calc(100% / 3);
+    height: 5px;
+    background-color: #a4284a;
+    border-radius: 5px;
+    left: calc( (100% / 3)*2 ) ;
+    top: 0;
+    box-shadow: 0px -10px 20px #a4284a;
+    transition: all 500ms ease-in-out;
+}
+#movie #bio #tabs #tab-body{
+    height: calc(100% - 60px);
+    position: relative;
+    padding: 10px 5px;
+    width: 100%;
+}
+#movie #bio #tabs #tab-body > div{
+    position: absolute;
+    top: -200%;
+    opacity: 0;
+    width: 100%;
+
+    margin-top: 5px;
+    transform: scale(0.9);
+    transition:opacity 0.5s ease-in-out 0ms ,
+    transform 500ms ease-in-out 0ms ;
+}
+#movie #bio #tabs #tab-body > div.active{
+    top: 0;
+    opacity: 1;
+    transform: scale(1);
+    
+    margin-top: 0px;
+}
+#movie #bio #tabs #tab-body > div p{
+    padding: 5px;
+    text-align: right;
+}
+
+#movie #bio #tabs #tab-body > div ul{
+    display: block;
+    width: 90%;
+    padding: 10px 0 ;
+    list-style: none;
+    margin: 0 auto;
+}
+#movie #bio #tabs #tab-body  li{
+    width: 100%;
+    display: block;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    height: 40px;
+    margin: 3px;
+    padding: 8px;
+
+
+}
+
+
+
+
+
+@media screen and (max-width : 700px) {
+    #header{
+        
+        height: 50px;
+        padding-top: 0px;
+
+    
+    }  
+    
+    #header button{
+        border: 0px solid transparent;
+        background-color: transparent;
+        display: block;
+        margin: 0 auto;
+        width: 40px;
+        height: 40px;
+    } 
+    #header button svg{
+        width: 100% ;
+        height: 100%;
+    }
+    #movies{
+    }
+    #movies #poster {
+        position: relative;
+    
+    }
+    #movies #poster img{
+        width: 100%;
+        z-index: -2;
+    }
+    #movies #info{
+        position: absolute;
+        bottom: 0px;
+        background-color: #777;
+        z-index: -1;
+        display: none;
+    
+    
+    }
+    #movies #options{
+        background-color: #fff;
+        height: 100px;
+        padding-top: 20px;
+        z-index: 99;
+    
+    }
+    #movies #options button{
+        display: block;
+        margin: 0 auto;
+        background-color: transparent;
+    }
+    #movies #options #like,#movies #options #dislike{
+        border: 1px solid #f00;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    #movies #options #like{
+        border: 1px solid #0f0;
+    
+    }
+    #movies #options #like svg{
+        fill: #0f0;
+    }
+    #movies #options #dislike svg{
+        fill: #f00
+    }
+    #movies #options button svg{
+        width: 90%;
+        height: 90%;
+    }
+    #movies #options #more{
+       
+    }
+    /*  */
+    /*  */
+    /*  */
+
+    
+    
+}
+
 
 

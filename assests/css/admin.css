@@ -1,0 +1,31 @@
+#admin-header{
+    height: 50px;
+    border: 1px solid #000;
+
+}
+
+#admin-menu {
+    border: 1px solid #000;
+    width: 200px;
+    height: calc(100vh - 50px);
+    position: absolute;
+    left: -100%; 
+    transition: all 500ms ease-in-out;   
+}
+#admin-menu ul{
+    list-style: none;
+    padding: 0px ;
+    margin-block: 10px;
+}
+#admin-menu ul li{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+#admin-menu ul li.active{
+    color: #a4284a;
+    border: 1px solid #a4284a;
+
+    
+}
