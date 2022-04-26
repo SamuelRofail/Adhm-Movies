@@ -29,7 +29,6 @@ for (let i =0 ; i< tabsPane.length; i++){
            
         }
         else{
-            console.log(i);
             tabheader.getElementsByClassName("active")[0].classList.remove("active");
             tabsPane[i].classList.add("active");
             tabbody.getElementsByClassName("active")[0].classList.remove("active");
