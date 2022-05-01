@@ -12,70 +12,48 @@ function adminmenu(){
     }
 }
 
+
+let tabheader = document.getElementsByClassName("movie-header")[0];
+let tabindicator = document.getElementsByClassName("movie-indecator")[0];
+let tabbody = document.getElementsByClassName("movie-tabs")[0];
+let tabsPane = tabheader.getElementsByTagName("div");
+for (let i =0 ; i< tabsPane.length; i++){
+    
+    tabsPane[i].addEventListener("click" , function(){
+        tabheader.getElementsByClassName("active")[0].classList.remove("active");
+        tabsPane[i].classList.add("active");
+        tabbody.getElementsByClassName("active")[0].classList.remove("active");
+        tabbody.getElementsByTagName("div")[i].classList.add("active");
+        
+        if(i == 0){
+            tabindicator.style.left = "calc(100% / 2.85 )";
+            document.getElementById("editbutton").style.display = "none"
+        }
+        else{
+            tabindicator.style.left = "calc(calc(100% / 2 ) *"+ i+ " )";
+            document.getElementById("editbutton").style.display = "block"
+
+        }
+        
+    });
+}
+
+
+
+
+
+
+
 let genre = document.querySelectorAll(".genreEdit");
 
 
 
 function edit(){
     var inputs = document.querySelectorAll(".editing");
-
-    var btns = document.querySelectorAll(".editor");
-    for(var i =0 ; i< btns.length ; i++){
-        btns[i].style.display = "block";
-    }
     for(var x = 0 ; x< inputs.length; x++){
         inputs[x].removeAttribute("disabled");
-        inputs[x].style.border = "1px solid #000";
-    }
-    for (let z =0 ; z< genre.length; z++){
-        genre[z].style.cursor ="pointer";
+        inputs[x].style.border = "3px solid #000";
     }
 }
 
-function addkind(){
-    var newkind = window.prompt();
-    var span = document.createElement("span");
-    span.setAttribute("class", "badge bg-secondary text-light genreEdit");
-    span.innerText = newkind;
-    var genre = document.getElementById("movie-kind");
-    genre.insertAdjacentElement("afterbegin", span);
-}
-function addgenre(){
-    var newkind = window.prompt();
-    var span = document.createElement("span");
-    span.setAttribute("class", "badge bg-secondary text-light genreEdit");
-    span.innerText = newkind;
-    var genre = document.getElementById("movie-genre");
-    genre.insertAdjacentElement("afterbegin", span);
 
-    
-
-
-}
-
-function addrole(){
-    var cast = document.getElementById("roles");
-    console.log(cast);
-    var e = document.createElement("div");
-    e.setAttribute("class", "col-6")
-    e.innerHTML = "<input type='text'  value='الدور:' class='editing'><input type='text'  value='actor name' class='editing'>";
-    cast.insertAdjacentElement("beforeend", e);
-
-
-}
-for (let i =0 ; i< genre.length; i++){
-    
-    genre[i].addEventListener("click" , function(){
-        if(genre[i].style.cursor == "pointer"){
-            if(confirm("You will Remove a Genre") == true)
-            genre[i].remove();
-        }
-        else{
-            console.log(genre[i]);
-
-        }
-        
-        
-
-    });
-}

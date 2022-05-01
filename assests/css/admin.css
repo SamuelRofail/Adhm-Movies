@@ -1,3 +1,4 @@
+
 #admin-header{
     height: 50px;
     border-bottom: 1px solid #999;
@@ -185,184 +186,192 @@
 #movie-edit{
     border: 0px solid #000;
 }
-#movie-edit #movie-poster img{
-    height: 90px;
-    display: block;
-    margin: 2px auto;
-}
-#movie-edit #movie-poster button{
-    border: 1px solid #a4284a;
-    border-radius: 5px;
-    margin: 0 auto;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 3px;
-    transition: 0.3s;
-    cursor: pointer;
-
-}
-#movie-edit #movie-poster button:hover{
-    background-color: #a4284a;
-    color: #fff;
-    transition: 0.3s;
-}
-#movie-edit #movie-name{
+#movie-edit #movie-header{
     border: 0px solid #000;
-
+    background-color: #f7f7f7;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
-#movie-edit #movie-name input{
-    width: 60px;
+#movie-edit #movie-header>div{
+    width: calc(30% / 2);
     text-align: center;
+    font-weight: 600;
     border: 0px solid #000;
-
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    height: 100%;
+    padding-top: 10px;
+    font-size: 18px;
 }
-#movie-edit #movie-rate{
-    border: 0px solid #000;
 
-}
-#movie-edit #movie-rate span {
-    display: inline-block;
+#movie-edit .movie-indecator{
     position: relative;
-    top: 2px;
+    width: calc(30% / 2);
+    height: 5px;
+    background-color: #7ca8cb;
+    border-radius: 5px;
+    left: calc(100% /2);
+    top: -3px;
+    box-shadow: 0px -10px 20px #7ca8cb;
+    transition: all 500ms ease-in-out;
 }
-#movie-edit #movie-rate span svg{
-    fill: #f5c518;
+
+#movie-edit .movie-tabs{
+    position: relative;
+
 
 }
-#movie-edit #movie-rate input{
-    width: 60px;
-    text-align: left;
-    border: 0px solid #000;
+
+#movie-edit .movie-tabs > div{
+    position: absolute;
+    top: -200%;
+    opacity: 0;
+    width: 100%;
+
+    margin-top: 5px;
+    transform: scale(0.9);
+    transition:opacity 0.5s ease-in-out 0ms ,
+    transform 500ms ease-in-out 0ms ;
+}
+#movie-edit .movie-tabs > div.active{
+    top: 0;
+    opacity: 1;
+    transform: scale(1);
     
-
-}
-#movie-edit #genre{
-    border: 0px solid #000;
-    min-height: 50px;
-    text-align: center;
-    padding-bottom: 5px;
-    border-top: 2px solid #a4284a;
-}
-#movie-edit #genre #movie-kind{
-    text-align: center;
+    margin-top: 0px;
 }
 
-#movie-edit #genre span{
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #bbb;
-    border: 1px solid #bbb;
-    margin: 3px;
-    cursor:context-menu;
-}
-#movie-edit #genre button{
-    width: 90px;
-    border: 1px solid #a4284a;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 12px;
-    margin: 2px auto;
 
+
+
+
+#movie-edit button{
+    outline: none;
 }
-#movie-edit #genre button:hover{
-    background-color: #a4284a;
-    color: #fff;
-    transition: 0.3s;
-}
-#movie-edit #cast{
+#movie-edit form {
     direction: rtl;
-    border-right: 1px solid #a4284a;
-    
 }
-#movie-edit #cast h4{
-    text-align: center;
-    padding: 5px;
 
-}
-#movie-edit #cast .col-6{
 
+#movie-edit form input[disabled]{
+    border: 1px solid #777 ;
+    background-color: #000;
 }
-#movie-edit #cast label{
-    display: inline-block;
-    float: right;
-    
-}
-#movie-edit #cast input{
-    display: inline-block;
-    width: 47%;
-    text-align: right;
-    border: 0px solid #000;
-    margin-bottom: 2px;
 
-}
-#movie-edit #cast button{
-    width: 90px;
-    border: 1px solid #a4284a;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 12px;
-    margin: 2px auto;
-}
-#movie-edit #cast button:hover{
-    background-color: #a4284a;
-    color: #fff;
-    transition: 0.3s;
-}
-#movie-edit #bio{
-    border-left: 1px solid #a4284a;
 
-}
-#movie-edit #bio h4{
-    text-align: center;
-    padding: 5px;
-}
-#movie-edit #bio textarea{
-    width: 100%; 
-    text-align: right;
-    background-color: #fff;
+#movie-edit form input[type=text]{
+    display: block;
+    width: 100%;
+    margin: 8px auto;
     color: #000;
-    border: 0px solid #000;
-    height: 250px;
-}
-
-#movie-edit input[disabled]{
     background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+
+}
+#movie-edit form button{
+    display: block;
+    text-align: center;
+    margin: 8px auto;
+    border: 0px solid #000 ;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    color: #7ca8cb;
+}
+#movie-edit form #genre{
     border: 1px solid #000;
+    border-radius: 5px;
+
+
+}
+#movie-edit form #genre label{
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+
+}
+
+#movie-edit form #genre input{
+    display: inline-block;
+    width: 50%;
+    
+
+}
+#movie-edit form textarea{
+    min-width: 80%;
+    display: block;
+    min-height: 40px;
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
     color: #000;
 
 }
-#movie-edit input[type=submit]{
-    background-color: #fff;
-    border: 1px solid #a4284a;
-    margin: 3px auto;
-    padding: 3px;
-    width: 100px;
-    border-radius: 5px;
+#movie-edit form hr{
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #999;
+    background-color: #999;
+    border-radius: 10px;
+}
+#movie-edit form #tags{
+    direction: rtl;
+    text-align: right;
+}
+#movie-edit form #tags input{
+    display: inline;
+    
+    max-width: max-content;
+    font-size: 14px;
+    border: 2px solid #999;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 2px;
+}
+#movie-edit form #movie-info{
+    border: 0px solid #999;
+    direction: ltr;
+    padding-left: 20px;
+
+}
+#movie-edit form #movie-info label{
+    display: inline-block;
+}
+#movie-edit form #movie-info input{
+    display: inline-block;
+    color: #7ca8cb;
+    border: 0px solid #000;
+    width: 80%;
+    text-align: left;
+    padding-left: 10px;
+
+}
+#movie-edit form #movie-info hr{
+    width: 98%;
+    border: 0.5px solid #999;
+
+}
+#movie-edit form input[type=submit]{
+    display: none;
+    margin: 30px auto;
+    margin-bottom: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #7ca8cb;
+    color: #fff;
+    border: 1px solid #7ca8cb;
     cursor: pointer;
     transition: 0.3s;
 
-
 }
-#movie-edit input[type=submit]:hover{
-    background-color: #a4284a;
-    color: #fff;
+#movie-edit form input[type=submit]:hover{
+    background-color: #000;
+    border-color: #000;
     transition: 0.3s;
-
-}
-.editor{
-    display: none;
-}
-
-
-#movie-edit h1{
-    
-}
-#movie-edit p{
-    padding-left: 3px ;
-}
-#movie-edit span{
-    font-weight: 400;
-    
 
 }

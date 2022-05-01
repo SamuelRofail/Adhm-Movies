@@ -1,5 +1,22 @@
 movies=[
     {
-        title:""
-    }
-]
+        title:'Dune',
+        genre:'Action',
+        src:require('./assets/img/download.jpg'),
+    },
+    {
+        title:'Dune',
+        genre:'Action',
+        src:require('./assets/img/download.jpg'),
+    },
+    {
+        title:'Dune',
+        genre:'Action',
+        src:require('./assets/img/download.jpg'),
+    },
+    {
+        title:'Dune',
+        genre:'Action',
+        src:require('./assets/img/download.jpg'),
+    },
+];
