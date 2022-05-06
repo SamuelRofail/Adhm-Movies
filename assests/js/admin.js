@@ -39,6 +39,34 @@ for (let i =0 ; i< tabsPane.length; i++){
 }
 
 
+let movieheader = document.getElementsByClassName("tab-header")[0];
+/* console.log(tabheader);
+ */let movieindicator = document.getElementsByClassName("tab-indicator")[0];
+/* console.log(tabindicator);
+ */let moviebody = document.getElementsByClassName("tab-body")[0];
+/* console.log(tabbody);
+ */
+let moviePane = tabheader.getElementsByTagName("div");
+/* console.log(tabsPane.length);
+ */
+for (let i =0 ; i< moviePane.length; i++){
+    
+    moviePane[i].addEventListener("click" , function(){
+        if(i==0){
+           
+        }
+        else{
+            movieheader.getElementsByClassName("active")[0].classList.remove("active");
+            moviePane[i].classList.add("active");
+            moviebody.getElementsByClassName("active")[0].classList.remove("active");
+            moviebody.getElementsByTagName("div")[i].classList.add("active");
+    
+            movieindicator.style.left = "calc(calc(100% / 3 ) *"+ i+ " )";
+        }
+        
+
+    });
+}
 
 
 

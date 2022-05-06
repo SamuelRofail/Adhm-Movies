@@ -56,6 +56,14 @@ body{
     fill: #ed496e;
 }
 
+
+#header #filterback a{
+    padding-top: 5px ;
+}
+#header #filterback a svg{
+    fill: #000;
+}
+
 #sidemenu{
     width: 250px;
     background-color: #fff;
@@ -336,6 +344,215 @@ body{
 
 }
 
+/*  */
+/*  */
+/*  */
+#filters{
+    direction: rtl;
+}
+#filters label{
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+#filters #select{
+    background-color: #ccc;
+    display: block;
+    margin-top: 15px;
+    cursor: pointer;
+
+    height: 50px;
+    font-size: 18px;
+    padding-right: 20px;
+    width: 100%;
+    border-radius: 10px;
+
+    outline: none;
+    position: relative;
+    overflow-y: 0;
+    margin-bottom: 10px;
+
+}
+#filters #select span{
+    position: absolute;
+    left: 0;
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    top: 5px;
+    left: 15px;
+    z-index: 100;
+}
+#filters #select span svg{
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+}
+#filters #select ul{
+    width: 100%;
+    position: absolute;
+    top: 0px;  
+    opacity: 0;
+    right: 0;  
+    border-radius: 10px;
+    height: 40px;
+    padding: 0;
+    list-style: none;
+    overflow-y: hidden;
+    transition: all 175ms ease-in-out ;
+}
+#filters #select ul li{
+    height: 48px;
+    padding-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    color: #000;
+    background-color: #ccc;
+    text-align: center;
+
+}
+#filters #select ul li:nth-last-child(1){
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+
+
+}
+
+#filters #productionYear input{
+    border: 1px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 10px;
+    padding-right: 10px;
+    outline: none;
+
+
+}
+#filters #filmRate #stars{
+    text-align: right;
+}
+#filters #filmRate #stars #star{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+#filters #filmRate #stars #star svg{
+    width: 30px;
+    height: 30px;
+    fill: #e596a9;
+}
+#filters #platforms .col-4{
+    padding: 0;
+    height: 50px;
+}
+#filters #platforms label{
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    text-align: center;
+
+
+}
+#filters #platforms input{
+    display: inline-block;
+    float: right;
+    border: 1px solid #000;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 10px;
+
+}
+#filters form input[type=submit]{
+    display: block;
+    background-color: #a4284a;
+    border: 0px solid #a4284a;
+    width: 80%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px;
+    margin: 10px auto;
+    color: #fff;
+    border-radius: 10px;
+}
+#survey {
+     direction: rtl;
+     text-align: center;
+}
+#survey p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+#survey .row{
+    border: 1px solid #ccc;
+    margin-top: 40px;
+    margin-inline: 0;
+    border-radius: 15px;
+
+
+}
+#survey .row.active{
+    border-color: #a4284a;
+    border-width: 2px;
+    color: #a4284a;
+    background-color: #a428495b;
+}
+#survey .row label{
+    display: block;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+    padding-top: 15px;
+    font-size: 16px;
+    padding-right: 10px;
+    font-weight: 500;
+}
+#survey .row input{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;    
+    display: inline-flex;
+    appearance: none;
+    border-radius: 50%;
+    padding-right:6px; 
+
+} 
+#survey .row input::after{
+    content: "\2713";
+    font-weight: 600;
+    color: #fff;
+    display: none;
+    font-size: 16px;  
+}
+#survey .row input:checked    {
+    background: #a4284a;
+
+}
+#survey .row input:checked::after{
+    display: inline-block;
+}
+#survey input[type=submit]{
+    width: 100%;
+    margin-top: 50px ;
+    height: 60px;
+    font-weight: 500;
+    background-color: #a4284a;
+    border-color: transparent;
+    color: #fff;
+    border-radius: 15px;
+}
 
 
 

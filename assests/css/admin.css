@@ -1,8 +1,9 @@
 
 #admin-header{
-    height: 50px;
-    border-bottom: 1px solid #999;
-    box-shadow: 0px 1px 5px #a4284a;
+    height: 60px;
+    border-bottom: 0px solid #999;
+    box-shadow:  0px 1px 5px #a4284a;
+    
 }
 #admin-header button{
     padding: 5px;
@@ -10,6 +11,7 @@
     border: 2px solid #a4284a;
     border-radius: 5px;
     display: block;
+    width: max-content;
     margin: 8px auto;
     cursor: pointer;
     outline: none;
@@ -23,8 +25,6 @@
     fill: #fff;
     
 }
-
-
 #admin-header p{
     color: #a4284a;
     margin-top: 5px;
@@ -51,14 +51,11 @@
 #admin-header #searchbar span{
     position: absolute;
     top: 15px;
-    left: 25px;
+    left: 10px;
 }
 #admin-header #searchbar span svg{
     fill: #a4284a;
 }
-
-
-
 #admin-menu {
     width: 250px;
     background-color: #a4284a ;
@@ -81,8 +78,7 @@
     font-weight: 500;
 
 }
-#admin-menu ul li.active {
-}
+
 #admin-menu ul li.active a{
     color: #fff;
     
@@ -180,7 +176,9 @@
 
 #movie-edit input{
     border: 1px solid #000;
-
+}
+#movie-edit input:focus{
+    outline: 3px solid #7ca8cb;
 }
 
 #movie-edit{
@@ -198,14 +196,14 @@
 #movie-edit #movie-header>div{
     width: calc(30% / 2);
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
     border: 0px solid #000;
     outline: none;
     cursor: pointer;
     color: #000;
     height: 100%;
-    padding-top: 10px;
-    font-size: 18px;
+    padding-top: 5px;
+    font-size: 14px;
 }
 
 #movie-edit .movie-indecator{
@@ -244,10 +242,6 @@
     
     margin-top: 0px;
 }
-
-
-
-
 
 #movie-edit button{
     outline: none;
@@ -305,6 +299,7 @@
 #movie-edit form textarea{
     min-width: 80%;
     display: block;
+    margin: 0 auto;
     min-height: 40px;
     text-align: center;
     padding: 5px;
@@ -341,14 +336,16 @@
 }
 #movie-edit form #movie-info label{
     display: inline-block;
+    border: 0px solid #000;
+
 }
 #movie-edit form #movie-info input{
     display: inline-block;
     color: #7ca8cb;
     border: 0px solid #000;
-    width: 80%;
     text-align: left;
     padding-left: 10px;
+    margin-inline: auto;
 
 }
 #movie-edit form #movie-info hr{
@@ -374,4 +371,18 @@
     border-color: #000;
     transition: 0.3s;
 
+}
+
+
+
+
+
+
+
+@media screen and (max-width : 772px){
+    #admin-header p{
+        font-size: 16px;
+        
+    
+    }
 }

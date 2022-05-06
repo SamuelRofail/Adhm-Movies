@@ -3,25 +3,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
+    <title>Movie Info</title>
     <link rel="stylesheet" href="assests/css/bootstrap.css">
     <link rel="stylesheet" href="assests/css/admin.css">
 </head>
 <body>
     <div id="admin-header" class="row justify-content-between m-0 p-0">
-        <div class="col-2">
+        <div class="col-2 p-0">
             <button onclick="adminmenu();">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>                
             </button>
         </div>
-        <div class="col-2">
+        <div class="col-2 p-0">
             <p>
                 Admin Panel
             </p>
         </div>
-        <div class="col-6 " id="searchbar">
+        <div class="col-6 p-0" id="searchbar">
             <input type="text" placeholder="Search Movies...">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -29,8 +29,14 @@
                   </svg>
             </span>
         </div>
-        <div class="col-2 m-0">
-
+        <div class="col-2 border p-0">
+            <button id="editbutton" onclick="edit();">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                  </svg>
+                  Edit
+            </button>
         </div>
         
         
@@ -86,133 +92,111 @@
             </li>
         </ul>
     </div>
-    <div id="admin-movies">
-        <h1>
-            جميع الافلام
-        </h1>
-        <p>
-            يمكنك ان تختار افلام تحت اي نوع معين. فقط اضغط علي اي من الانواع التالية
-        </p>
-        <button>
-            <span class="badge bg-secondary text-light">Comedy</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Action</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Drama</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Crime</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Music</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Horror</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Fantasy</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Family</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Animation</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Adventure</span>
-        </button>
-        <button>
-            <span class="badge bg-secondary text-light">Sci-Fi</span>
-        </button>
-
-        <div id="all-movies" class="container">
-            <hr>
-            <div class="row m-0 p-0 justify-content-around">
-                <div class="col-4 text-left p-3">
-                    Showing ### of ###
-                </div>
-                <div class="col-4 text-right p-3">
-                    <label>Sort by: </label>
-                    <select >
-                        <option selected="selected">
-                            Rating
-                        </option>
-                        <option >
-                            Ascending
-                        </option>
-                        <option >
-                            Descending
-                        </option>
-                        <option >
-                            Number of Ratings
-                        </option>
-                    </select>
-                </div>
-                <div class="col-12 "  >
-                    <table>
-                        <thead>
-                            <th>
-                                اسم الفيلم
-                            </th>
-                            <th>
-                                تقييم الفيلم
-                            </th>
-                        </thead>
-                        <tr>
-                            <td >
-                                <a href="adminEditMovie.html">
-                                    <img src="./assests/img/download.jpg"  alt="">
-                                    <p > 
-                                        اسم الفيلم <span> (2000)</span>
-                                    </p>
-                                </a>
-                            </td>
-                            
-                            <td>
-                                8.5/10
-                            </td>
-                        </tr>
-                        <tr>
-                            <td >
-                                <a href="adminEditMovie.html">
-                                    <img src="./assests/img/download.jpg"  alt="">
-                                    <p > 
-                                        اسم الفيلم <span> (2000)</span>
-                                    </p>
-                                </a>
-                            </td>
-                            
-                            <td>
-                                8.5/10
-                            </td>
-                        </tr>
-                        <tr>
-                            <td >
-                                <a href="adminEditMovie.html">
-                                    <img src="./assests/img/download.jpg"  alt="">
-                                    <p > 
-                                        اسم الفيلم <span> (2000)</span>
-                                    </p>
-                                </a>
-                            </td>
-                            
-                            <td>
-                                8.5/10
-                            </td>
-                        </tr>
-                        
-                        
-                    </table>
-                </div>
+    <div id="movie-edit" class="fluid-container  m-0">
+        <div id="movie-header" class=" movie-header">
+            <div >
+                دراسة عن الفيلم
             </div>
-            
+            <div class="active">
+                معلومات الفيلم
+            </div>
+        </div>
+        <div class="movie-indecator"></div>
+        <div class="movie-tabs">
+            <div id="tab-0"></div>
+            <div class="active" id="tab-1">
+                <form action="">
+                    <div id="movie" class="row justify-content-between  m-0 ">
+                        <div class="col-12 p-2 text-right">
+                            <h3 id="moviename">
+                                Dune 
+                            </h3>
+                            <span id="year">
+                                2021
+                            </span>
+                        </div>
+                        
+                        <div class="col-6 p-1 text-left" id="info">
+                            <p>
+                                تصنيف الفيلم :
+                                <span>
+                                    عائلي
+                                </span>
+                            </p>            
+                        </div>
+                        <div class="col-6  p-0 text-right" id="info">
+                            <p>
+                                نوع الفيلم :
+                                <span>
+                                    اكشن
+                                </span>
+                            </p>  
+                        </div>
+                        <div class="col-12 p-1" id="bio">
+                            <div id="tabs">
+                                <div id="tab-header" class="tab-header">
+                                    <div style="color: #a4284a; font-size: 20px;">
+                                        10/8.5
+                                    </div>
+                                    
+                                    <div>
+                                        الابطال
+                                    </div>
+                                    <div class="active " >
+                                        القصة
+                                    </div>
+                                </div>
+                                <div id="indicator">
+                                    <div id="tab-indicator" class="tab-indicator"></div>
+                                </div>
+                                <div id="tab-body" class="tab-body">
+                                    <div>
+                
+                                    </div>
+                                    <div >
+                                        <ul>
+                                            <li>
+                                                Actor Name
+                                            </li>
+                                            <li>
+                                                Actor Name
+                                            </li>
+                                            <li>
+                                                Actor Name
+                                            </li>
+                                            <li>
+                                                Actor Name
+                                            </li>
+                                            <li>
+                                                Actor Name
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="active">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste in, consequatur vel dolorem mollitia dicta saepe pariatur inventore eaque numquam. Quidem totam velit ipsa obcaecati doloremque maxime eaque inventore aliquam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est vitae a quas et nisi labore exercitationem laborum voluptates tempora? Ipsam optio in aut fugit, dignissimos nobis reiciendis facere debitis?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                
+                               
+                                    
+                        </div>
+                    </div>
+                    <input type="submit" value="حفظ" class="editor">
+                </form>
+            </div>
         </div>
         
-
-        
     </div>
+            
+        
+        
 
 
     <script src="./assests/js/bootstrap.js"></script>

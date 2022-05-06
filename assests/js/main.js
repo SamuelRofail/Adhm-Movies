@@ -10,18 +10,10 @@ function showmenu(){
         menu.style.left = "0%";
     }
 }
-
-
 let tabheader = document.getElementsByClassName("tab-header")[0];
-/* console.log(tabheader);
- */let tabindicator = document.getElementsByClassName("tab-indicator")[0];
-/* console.log(tabindicator);
- */let tabbody = document.getElementsByClassName("tab-body")[0];
-/* console.log(tabbody);
- */
+let tabindicator = document.getElementsByClassName("tab-indicator")[0];
+let tabbody = document.getElementsByClassName("tab-body")[0];
 let tabsPane = tabheader.getElementsByTagName("div");
-/* console.log(tabsPane.length);
- */
 for (let i =0 ; i< tabsPane.length; i++){
     
     tabsPane[i].addEventListener("click" , function(){
@@ -36,7 +28,7 @@ for (let i =0 ; i< tabsPane.length; i++){
     
             tabindicator.style.left = "calc(calc(100% / 3 ) *"+ i+ " )";
         }
-        
-
     });
 }
+
+
