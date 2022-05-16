@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assests/css/bootstrap.css">
     <link rel="stylesheet" href="assests/css/main.css">
     
+    
 
 
 </head>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <div id="sidemenu">
-        <div id="profile" class="row   justify-content-around ">
+        <div id="profile" class="row   justify-content-center ">
             <div class="col-4 ">
                 <img src="./assests/img/admin1.png" alt="">
             </div>
@@ -83,17 +84,27 @@
         </ul>
     </div>
     <div id="movies">
-        <div id="poster">
-            <img src="./assests/img/download.jpg" alt="">
-            <div id="info">
-                <p>
-                    Movie Name (2020)
-                </p>
+        <div id="movielefter">
+            <div id="card">
+                <img src="./assests/img/download.jpg" alt="">
+                
             </div>
+            <div id="card">
+                <img src="./assests/img/download.jpg" alt="">
+                
+            </div>
+            <div id="card">
+                <img src="./assests/img/download.jpg" alt="">
+                
+            </div>
+            <div id="card">
+                <img src="./assests/img/download.jpg" alt="">
+            </div>
+                
         </div> 
         <div class="row justify-content-around  m-0" id="options">
             <div class="col-3 p-1">
-                <button id="like">
+                <button id="like" onclick="movielike();">
                     <img src="./assests/img/thumb_up_white_24dp.svg" alt="">
                     
                 </button>
@@ -108,7 +119,7 @@
 
             </div>
             <div class="col-3 p-1">
-                <button id="dislike">
+                <button id="dislike" onclick="dislike();">
                     <img src="./assests/img/thumb_down_white_24dp.svg" alt="">
                     
                 </button>
@@ -121,6 +132,7 @@
     <script src="./assests/js/bootstrap.js"></script>
     <script src="./assests/js/popper.js"></script>
     <script src="./assests/js/main.js"></script>
+
 
 </body>
 </html>

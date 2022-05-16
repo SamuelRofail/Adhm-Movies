@@ -1,6 +1,6 @@
 body{
-    height: 100vh;
-    overflow-y: hidden;
+    /* height: 100vh;
+    overflow-y: hidden; */
 }
 
 #header{
@@ -98,6 +98,7 @@ body{
     font-size: 15px;
     font-weight: 500;
     padding-top: 20px;
+    display: block;
 }
 #sidemenu ul{
     list-style: none;
@@ -138,19 +139,81 @@ body{
 
 #movies{
 }
-#movies #poster {
+
+
+#movies #movielefter {
     position: relative;
+    
+}
+#movies #movielefter #card{
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+    margin: 0px auto;
+    position: absolute;
+    max-height: 80vh;
+    
+    left: 0;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+#movies #movielefter #card.likeremove{
+    left: 100%;
+    background-color: #0f0;
+    transform: scale(1.1);
 
 }
-#movies #poster img{
-    z-index: -2;
-    margin: 5px auto;
+#movies #movielefter #card.likeremove::after{
+    content: 'Dislike';
     display: block;
-    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 0, 0.655);
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    padding-top: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
 }
+#movies #movielefter #card.dislikeremove{
+    left: -100%;
+
+    transform: scale(1.1);
+}
+#movies #movielefter #card.dislikeremove::after{
+    content: 'Dislike';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.664);
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    padding-top: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+#movies #movielefter img{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
 #movies #info{
     text-align: center;
     padding: 0;
+    background-color: #fff;
+
+
 
 }
 #movies #info p{
@@ -161,6 +224,9 @@ body{
 #movies #options{
     background-color: #fff;
     height: 100px;
+    position: absolute;
+    bottom: calc(100% /15);
+    width: 100%;
     padding-top: 10px;
     z-index: 99;
 
@@ -305,7 +371,7 @@ body{
     top: -200%;
     opacity: 0;
     width: 100%;
-
+    height: 100%;
     margin-top: 5px;
     transform: scale(0.9);
     transition:opacity 0.5s ease-in-out 0ms ,
@@ -326,10 +392,29 @@ body{
 #movie #bio #tabs #tab-body > div ul{
     display: block;
     width: 90%;
-    padding: 10px 0 ;
+    padding: 10px 5px ;
+    height: 100%;
     list-style: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin: 0 auto;
 }
+#movie #bio #tabs #tab-body > div ul::-webkit-scrollbar{
+    width: 8px;
+}
+#movie #bio #tabs #tab-body > div ul::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: #ddd;
+
+} 
+#movie #bio #tabs #tab-body > div ul::-webkit-scrollbar-thumb{
+    background-color: #a4284a;
+    border-radius: 5px;
+
+}
+
+
+
 #movie #bio #tabs #tab-body  li{
     width: 100%;
     display: block;
@@ -358,7 +443,7 @@ body{
     margin-top: 20px;
 }
 #filters #select{
-    background-color: #ccc;
+    background-color: #eee;
     display: block;
     margin-top: 15px;
     cursor: pointer;
@@ -386,7 +471,7 @@ body{
     z-index: 100;
 }
 #filters #select span svg{
-    fill: #fff;
+    fill: #a4284a;
     width: 100%;
     height: 100%;
 }
@@ -409,7 +494,7 @@ body{
     cursor: pointer;
     width: 100%;
     color: #000;
-    background-color: #ccc;
+    background-color: #eee;
     text-align: center;
 
 }
@@ -421,11 +506,11 @@ body{
 }
 
 #filters #productionYear input{
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     display: block;
     width: 90%;
     height: 40px;
-    background-color: #ccc;
+    background-color: #eee;
     border-radius: 10px;
     padding-right: 10px;
     outline: none;

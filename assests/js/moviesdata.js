@@ -2,21 +2,21 @@ movies=[
     {
         title:'Dune',
         genre:'Action',
-        src:require('./assets/img/download.jpg'),
+        src:('./assests/img/download.jpg'),
     },
     {
-        title:'Dune',
+        title:'aa',
         genre:'Action',
-        src:require('./assets/img/download.jpg'),
+        src:('./assests/img/download.jpg'),
     },
     {
-        title:'Dune',
+        title:'xx',
         genre:'Action',
-        src:require('./assets/img/download.jpg'),
+        src:('./assests/img/download.jpg'),
     },
     {
-        title:'Dune',
+        title:'cc',
         genre:'Action',
-        src:require('./assets/img/download.jpg'),
+        src:('./assests/img/download.jpg'),
     },
 ];
