@@ -1,15 +1,16 @@
 
 var menu = document.getElementById("sidemenu");
 var head = document.getElementById("header");
-var total = document.querySelector(".afterside");
+var total = document.querySelectorAll(".afterside");
+console.log(total);
 function showmenu(){
    
    
     menu.classList.add("active");
     menu.style.left = "0%";
     head.style.opacity = "0.3";
-    console.log(total);
-    total.style.opacity = "0.3";
+    console.log(total[0]);
+    total[0].style.opacity = "0.3";
 
 
 
@@ -18,7 +19,7 @@ function closemenu(){
     menu.classList.remove("active");
     menu.style.left = "-100%";
     head.style.opacity = "1";
-    total.style.opacity = "1";
+    total[0].style.opacity = "1";
 
 }
 
@@ -54,12 +55,6 @@ function next(){
 
 }
 
-var y = 6;
-var x =["b",1,2,5];
-for(var i =0 ; i<x.length;i++){
-    y+= x[i];
-}
-console.log(y);
 
 window.addEventListener("load",()=>{
     let cards = document.querySelectorAll("#card");

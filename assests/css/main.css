@@ -3,6 +3,15 @@ body{
     overflow-y: hidden; */
 }
 
+/* Fonts
+font-family: 'Barlow', sans-serif;
+font-family: 'Mada', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Tajawal', sans-serif;
+
+
+*/
+
 #header{
     background-color: #fff;
     border-bottom: 1px solid #999;
@@ -71,12 +80,15 @@ body{
     position: absolute;
     z-index: 200;
     padding: 0;
+    box-shadow: 0 5px 10px #f244849f;
     top: 0;
     left: -100%;
     border: 0px solid #999;
     transition: 0.2s;
     padding-top: 25px;
-    padding-left: 8px;
+    padding-left: 12px;
+    font-family: 'Barlow', sans-serif;
+    
 }
 #sidemenu #sideheader button{
     border: 0 solid #1D2F40;
@@ -104,7 +116,7 @@ body{
 }
 #sidemenu #profile{
     height: 90px;
-    background-color: #F24484;
+    background-color: #f244849f;
     padding: 0;
     margin: 0px auto;
     
@@ -127,7 +139,7 @@ body{
     font-weight: 500;
     padding-top: 20px;
     display: block;
-    color: #1D2F40;
+    color: #fff;
 }
 #sidemenu ul{
     list-style: none;
