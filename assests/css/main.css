@@ -25,7 +25,7 @@ body{
 #header button svg{
     width: 100% ;
     height: 100%;
-    fill: #ed496e;
+    fill: #1D2F40;
 }
 #header button:focus{
     outline-width: 0px;
@@ -34,12 +34,12 @@ body{
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin-block-end: 15px ;
+    margin-block-end: 10px ;
 }
 #header h2{
     display: inline-block;
     font-size: 18px;
-    color: #192939;
+    color: #1D2F40;
 }
 #header a{
     text-decoration: none;
@@ -53,7 +53,7 @@ body{
 #header a svg{
     width: 100% ;
     height: 100%;
-    fill: #ed496e;
+    fill: #1D2F40;
 }
 
 
@@ -65,31 +65,59 @@ body{
 }
 
 #sidemenu{
-    width: 250px;
+    width: 300px;
     background-color: #fff;
     height: 100vh;
     position: absolute;
-    z-index: 99;
+    z-index: 200;
+    padding: 0;
+    top: 0;
     left: -100%;
-    border-right: 2px solid #999;
-    transition: all 0.5s ease-in-out;
+    border: 0px solid #999;
+    transition: 0.2s;
+    padding-top: 25px;
+    padding-left: 8px;
+}
+#sidemenu #sideheader button{
+    border: 0 solid #1D2F40;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+}
+#sidemenu #sideheader button svg{
+    width: 100% ;
+    height: 100%;
+    fill: #1D2F40;
+}
+#sidemenu #sideheader img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-block-end: 10px ;
+}
+#sidemenu #sideheader h2{
+    display: inline-block;
+    font-size: 18px;
+    color: #1D2F40;
 }
 #sidemenu #profile{
     height: 90px;
-    background-color: #faa;
+    background-color: #F24484;
     padding: 0;
-    margin: 5px auto;
+    margin: 0px auto;
+    
     
 }
 #sidemenu #profile .col-4{
     position: relative;
-
 }
 #sidemenu #profile img{
     width: 70px;
     position: absolute;
     top: 8px;
-    left:5px;
+    left:3px;
     height: 70px;
     border-radius: 50%;
 }
@@ -99,27 +127,31 @@ body{
     font-weight: 500;
     padding-top: 20px;
     display: block;
+    color: #1D2F40;
 }
 #sidemenu ul{
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 #sidemenu ul li{
     display: block;
-    height: 50px;
+    height: 45px;
     margin-bottom: 10px;
-    
+    padding-left: 10px;
+    border-left: 5px solid transparent;
+
 }
 #sidemenu ul li.active{
-    border-left: 5px solid #ed496e;
+    border-left: 5px solid #F24484;
 }
 #sidemenu ul li.active a{
-    color: #ed496e;
+    color: #F24484;
 
 }
 #sidemenu ul li a{
     display: block;
-    color: #000;
+    color: #1D2F40;
     height: 100%;
     padding-top: 10px;
     text-align: left;
@@ -130,14 +162,15 @@ body{
 #sidemenu ul li a svg{
     position: absolute;
     left: 5px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     top: 10px;
 }
 
 
 
 #movies{
+    transition: 0.2s;
 }
 
 
@@ -160,16 +193,14 @@ body{
 }
 #movies #movielefter #card.likeremove{
     left: 100%;
-    background-color: #0f0;
     transform: scale(1.1);
 
 }
 #movies #movielefter #card.likeremove::after{
-    content: 'Dislike';
+    content: 'Like';
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 255, 0, 0.655);
     align-items: center;
     text-align: center;
     color: #fff;
@@ -190,7 +221,6 @@ body{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 0, 0, 0.664);
     align-items: center;
     text-align: center;
     color: #fff;
@@ -273,7 +303,8 @@ body{
     border: 1px solid transparent;
     border-radius: 10px;
     margin-top: 5px;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
 }
 #movies #options p{
     text-align: center;
@@ -719,3 +750,154 @@ body{
 
 
 
+/* Packages */
+
+#packages{
+    font-family: 'Mada', sans-serif;
+
+}
+#packages h1{
+    color: #1D2F40;
+    text-align: center;
+    font-weight: 300;
+    font-size: 54px;
+}
+#packages p{
+    color: #1D2F40;
+    text-align: center;
+    font-weight: 400;
+
+}
+#packages #pack{
+    text-align: center;
+}
+#packages #pack .card{
+    display: block;
+    border: 0px solid transparent;
+    background-color: #fff;
+    box-shadow: #1D2F40 0px 0px 8px 2px;
+    width: 80%;
+    color: #Fff;
+    margin: 10px auto;
+    font-family: 'Tajawal', sans-serif;
+}
+#packages #pack .card .card-header {
+    border-width: 1px;
+    background-color: #1D2F40;
+}
+#packages #pack .card .card-header h3{
+    color: #fff;
+    padding: 10px;
+}
+#packages #pack .card .card-header p{
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 3px;
+    color: #fff;
+}
+#packages #pack .card .card-header ul{
+    direction: rtl;
+    text-align: right;
+    padding-right: 15px;
+}
+#packages #pack .card .card-header h4{
+    border: 1px solid #1D2F40;
+    padding: 8px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 0 auto;
+    direction: rtl;
+    font-weight: 300;
+}
+#packages #pack .card .card-body button{
+    border: 0px solid transparent;
+    height: 45px;
+    color: #fff;
+    border-radius: 25px;
+    background-size: 200%;
+    background-image: linear-gradient(to left, #F24B78 , #8C3052 ,#F24B78  );
+    transition: 0.2s;
+    cursor: pointer;
+    width: 60%;
+    display: block;
+    outline: none;
+    padding: 5px 8px;
+    margin: 3px auto;
+    z-index: 1;
+}
+#packages #pack .card .card-body button:hover{
+    background-position: right;
+    transition: 0.2s;
+}
+#payment h2{
+    text-align: center;
+    padding: 8px 16px;
+    color: #1D2F40;
+    font-size: 44px;
+    font-weight: 300;
+    direction: rtl;
+
+}
+#payment img{
+    height: 80px;
+
+}
+#payment form{
+    padding-top: 20px;
+}
+#payment form input[type=text], #payment form input[type=email] , #payment form input[type=password]{
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    border: 1.5px solid #F24484;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px #F24484;
+    text-align: center;
+    outline: none;
+
+}
+
+#payment form input[type=text]:focus,#payment form input[type=email]:focus,#payment form input[type=password]:focus{
+    box-shadow: 0px 0px 3px 1px #F24484;
+}  
+#payment form label{
+    color: #1D2F40;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 5%;
+    display: block;
+    font-weight: 500;
+
+}
+#payment form input[type=submit]{
+    display: block;
+    margin: 10px auto;
+    background-image: linear-gradient(to left, #F24B78 , #8C3052 ,#F24B78  );
+    transition: 0.2s;
+    cursor: pointer;
+    color: #fff;
+    min-width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 0px solid #F24484;
+    background-size: 200%;
+
+
+
+}
+#payment form input[type=submit]:hover{
+    background-position: right;
+    transition: 0.2s;
+}
+#payment form img{
+    display: block;
+    float: left;
+    margin-left: 55px;
+    width: 100px;
+}

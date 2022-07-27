@@ -19,6 +19,7 @@ function openselect(num){
         for(let i = 1 ; i< list.length;i++){
             list[i].addEventListener("click", function(){
                 list[0].innerHTML = list[i].innerHTML;
+                document.getElementById("filetype").getAttribute(value,list[0]);
 
             })
             
